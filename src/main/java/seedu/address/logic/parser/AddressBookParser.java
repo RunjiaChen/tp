@@ -72,6 +72,9 @@ public class AddressBookParser {
         case AddByStepCommand.COMMAND_WORD:
             return new AddByStepCommand();
 
+        case RemarkCommand.COMMAND_WORD:
+            return new RemarkCommandParser().parse(arguments);
+
         default:
             logger.finer("This user input caused a ParseException: " + userInput);
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
