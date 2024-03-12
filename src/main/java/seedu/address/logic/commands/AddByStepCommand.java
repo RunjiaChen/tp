@@ -10,6 +10,6 @@ public class AddByStepCommand extends Command {
 
     @Override
     public CommandResult execute(Model model) {
-        return new CommandResult(MESSAGE_SUCCESS,false,false,true);
+        return new CommandResult(MESSAGE_SUCCESS, false, false, true);
     }
 }
