@@ -1348,6 +1348,38 @@ Use case ends.
     * 3a1, LookMeUp confirms user's selection.\
       Use case ends.
 
+**Use case:** UC12 - Retrieving a person by name \
+**Person that can play this role:** Student who wants to look up a specific contact in LookMeUp
+
+**MSS**
+
+1. User types the `find` command.
+2. LookMeUp displays a list of people who watches the details entered by the user.
+   Use case ends.
+
+**Use case:** UC12 - Overwriting a contact in LookMeUp\
+**Person that can play this role:** Student who wishes to completely change the the details of an existing contact.
+
+**MSS**
+
+1. User types the `overwrite` command.
+2. LookMeUp changes the contact and displays the new contact in the database.\
+    Use case ends.
+
+**Extensions**
+* 1a. User typed the `overwrite` command with an invalid format or field
+    * 1a1. LookMeUp displays the error.
+    * 1a2. User enters the `overwrite` command again
+
+  Steps 1a1-1a2 are repeated until the command entered is correct.\
+  Use case resumes from step 2.
+
+
+
+
+
+
+
     
 
 
@@ -1591,7 +1623,7 @@ Do also note that the `redo` command must be immediately preceded with `undo`, f
    1. Open the .json file where the details of the contact have been started
    2. Go to the name of the first person, and remove the name (This will corrupt the data file as the name cannot be blank)
    3. Run LookMeUp, and execute a command (any command will do)
-   4. Expected output: LookMeUp will load up blank, and after the execution of the command, the corrupted json file will be erased.\
+   4. Expected output: LookMeUp will load up blank, and after the execution of the command, the corrupted json file will be erased.
 
 ### Planned Enhancements
 
